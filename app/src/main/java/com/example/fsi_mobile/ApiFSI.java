@@ -13,7 +13,8 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface ApiFSI {
-    String BASE_URL = "http://10.0.2.2/FSI_PHP/API/Hieu.PHP/";
+    //String BASE_URL = "http://10.0.2.2/FSI_PHP/API/Hieu.PHP/";
+    String BASE_URL = "http://capibara.maxirrx-website.fr/API/";
 
         @FormUrlEncoded
         @POST("Hieu.php")

@@ -112,6 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="10dp"
+        android:textStyle="bold"
         android:text="Nom:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInfoPerso" />
@@ -122,6 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="Prénom:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textNomEtu" />
@@ -132,6 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="Mail:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPreEtu" />
@@ -142,6 +145,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="146dp"
+        android:textStyle="bold"
         android:text="Classe:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInfoPerso" />
@@ -152,6 +156,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="127dp"
+        android:textStyle="bold"
         android:text="Spécialité:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textClasse" />
@@ -160,8 +165,9 @@
         android:id="@+id/textAdresse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="135dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="110dp"
+        android:textStyle="bold"
         android:text="Adresse:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textSpecialite" />
@@ -220,7 +226,7 @@
         android:id="@+id/tAdresse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
         android:hint="Adresse"
         app:layout_constraintStart_toEndOf="@+id/textAdresse"
@@ -232,6 +238,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="10dp"
+        android:textStyle="bold"
         android:text="Nom:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInfoEnt" />
@@ -242,6 +249,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="Adresse:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textNomEnt" />
@@ -252,6 +260,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="Nom du Maitre d'apprentissage:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAdresseEnt" />
@@ -262,6 +271,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="Prénom du Maitre d'apprentissage:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textNomMaitre" />
@@ -272,6 +282,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="Téléphone:"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
@@ -283,6 +294,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="Mail:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTelMaitre" />
@@ -353,6 +365,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="20dp"
+        android:textStyle="bold"
         android:text="Nom:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInfoTut" />
@@ -363,6 +376,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="Prenom:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textNomTut" />

@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void authenticateUser(String login, String mdp) {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2/FSI_PHP/API/")
+                //.baseUrl("http://10.0.2.2/FSI_PHP/API/")
+                .baseUrl("http://capibara.maxirrx-website.fr/API/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

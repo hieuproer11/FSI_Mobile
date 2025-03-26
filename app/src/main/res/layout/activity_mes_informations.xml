@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MesInformationsActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/vert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="280dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textMesInformations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="130dp"
+            android:text="Mes Informations"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="108dp"
+        android:background="@color/vert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageViewEscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="280dp"
+            app:srcCompat="@drawable/escape__1_">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/imageViewReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="280dp"
+            app:srcCompat="@drawable/resource_return">
+        </ImageView>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textInfoPerso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:text="INFORMATIONS PERSONNELLES:"
+        android:textColor="@color/vert"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/textInfoTut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="396dp"
+        android:text="INFORMATIONS DU TUTEUR:"
+        android:textColor="@color/vert"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/textInfoEnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="160dp"
+        android:text="INFORMATIONS D'ENTREPRISE:"
+        android:textColor="@color/vert"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/textNomEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:text="Nom:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInfoPerso" />
+
+    <TextView
+        android:id="@+id/textPreEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Prénom:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNomEtu" />
+
+    <TextView
+        android:id="@+id/textMailEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Mail:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPreEtu" />
+
+    <TextView
+        android:id="@+id/textClasse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="146dp"
+        android:text="Classe:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInfoPerso" />
+
+    <TextView
+        android:id="@+id/textSpecialite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="127dp"
+        android:text="Spécialité:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textClasse" />
+
+    <TextView
+        android:id="@+id/textAdresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="135dp"
+        android:text="Adresse:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSpecialite" />
+
+    <TextView
+        android:id="@+id/tNomEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:hint="Nom"
+        app:layout_constraintStart_toEndOf="@+id/textNomEtu"
+        app:layout_constraintTop_toBottomOf="@+id/textInfoPerso" />
+
+    <TextView
+        android:id="@+id/tPreEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Prenom"
+        app:layout_constraintStart_toEndOf="@+id/textPreEtu"
+        app:layout_constraintTop_toBottomOf="@+id/tNomEtu" />
+
+    <TextView
+        android:id="@+id/tMailEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Mail"
+        app:layout_constraintStart_toEndOf="@+id/textMailEtu"
+        app:layout_constraintTop_toBottomOf="@+id/tPreEtu" />
+
+    <TextView
+        android:id="@+id/tClasse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:hint="Classe"
+        app:layout_constraintStart_toEndOf="@+id/textClasse"
+        app:layout_constraintTop_toBottomOf="@+id/textInfoPerso" />
+
+    <TextView
+        android:id="@+id/tSpecialite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Specialite"
+        app:layout_constraintStart_toEndOf="@+id/textSpecialite"
+        app:layout_constraintTop_toBottomOf="@+id/tClasse" />
+
+    <TextView
+        android:id="@+id/tAdresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Adresse"
+        app:layout_constraintStart_toEndOf="@+id/textAdresse"
+        app:layout_constraintTop_toBottomOf="@+id/tSpecialite" />
+
+    <TextView
+        android:id="@+id/textNomEnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:text="Nom:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInfoEnt" />
+
+    <TextView
+        android:id="@+id/textAdresseEnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="15dp"
+        android:text="Adresse:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNomEnt" />
+
+    <TextView
+        android:id="@+id/textNomMaitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="15dp"
+        android:text="Nom du Maitre d'apprentissage:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAdresseEnt" />
+
+    <TextView
+        android:id="@+id/textPreMaitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="15dp"
+        android:text="Prénom du Maitre d'apprentissage:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNomMaitre" />
+
+    <TextView
+        android:id="@+id/textTelMaitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="15dp"
+        android:text="Téléphone:"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPreMaitre" />
+
+    <TextView
+        android:id="@+id/textMailMaitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="15dp"
+        android:text="Mail:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTelMaitre" />
+
+    <TextView
+        android:id="@+id/tNomEnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:hint="Nom"
+        app:layout_constraintStart_toEndOf="@+id/textNomEnt"
+        app:layout_constraintTop_toBottomOf="@+id/textInfoEnt" />
+
+    <TextView
+        android:id="@+id/tAdresseEnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Adresse"
+        app:layout_constraintStart_toEndOf="@+id/textAdresseEnt"
+        app:layout_constraintTop_toBottomOf="@+id/tNomEnt" />
+
+    <TextView
+        android:id="@+id/tNomMaitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Nom Maitre"
+        app:layout_constraintStart_toEndOf="@+id/textNomMaitre"
+        app:layout_constraintTop_toBottomOf="@+id/tAdresseEnt" />
+
+    <TextView
+        android:id="@+id/tPreMaitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Prénom Maitre"
+        app:layout_constraintStart_toEndOf="@+id/textPreMaitre"
+        app:layout_constraintTop_toBottomOf="@+id/tNomMaitre" />
+
+    <TextView
+        android:id="@+id/tTelMaitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Tel Maitre"
+        app:layout_constraintStart_toEndOf="@+id/textTelMaitre"
+        app:layout_constraintTop_toBottomOf="@+id/tPreMaitre" />
+
+    <TextView
+        android:id="@+id/tMailMaitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Mail Maitre"
+        app:layout_constraintStart_toEndOf="@+id/textMailMaitre"
+        app:layout_constraintTop_toBottomOf="@+id/tTelMaitre" />
+
+    <TextView
+        android:id="@+id/textNomTut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:text="Nom:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInfoTut" />
+
+    <TextView
+        android:id="@+id/textPreTut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="15dp"
+        android:text="Prenom:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNomTut" />
+
+    <TextView
+        android:id="@+id/tNomTut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Nom tuteur"
+        app:layout_constraintStart_toEndOf="@+id/textNomTut"
+        app:layout_constraintTop_toBottomOf="@+id/textInfoTut" />
+
+    <TextView
+        android:id="@+id/tPreTut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Prénom Tuteur"
+        app:layout_constraintStart_toEndOf="@+id/textPreTut"
+        app:layout_constraintTop_toBottomOf="@+id/tNomTut" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

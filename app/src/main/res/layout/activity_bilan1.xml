@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bilan1Activity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/vert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="280dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textMesBilans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="150dp"
+            android:text="Mes Bilans"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="108dp"
+        android:background="@color/vert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageViewEscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="280dp"
+            app:srcCompat="@drawable/escape__1_">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/imageViewReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="280dp"
+            app:srcCompat="@drawable/resource_return">
+        </ImageView>
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/bViewBilan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="160dp"
+        android:backgroundTint="@color/vert2"
+        android:text="Bilan 1"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/textDateVis1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:hint="Date Visite"
+        android:inputType="date"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bViewBilan1" />
+
+    <TextView
+        android:id="@+id/NoteDos1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="250dp"
+        android:hint="Note_doss"
+        android:inputType="number"
+        android:textSize="25dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDateVis1" />
+
+    <TextView
+        android:id="@+id/NoteOral1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="250dp"
+        android:hint="Note_Oral"
+        android:inputType="number"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NoteDos1" />
+
+    <TextView
+        android:id="@+id/NoteEnt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="250dp"
+        android:hint="Note_Ent"
+        android:inputType="number"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NoteOral1" />
+
+    <TextView
+        android:id="@+id/NoteMoyenne1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="250dp"
+        android:hint="Moyenne"
+        android:inputType="number"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NoteEnt1" />
+
+    <TextView
+        android:id="@+id/Remarque1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="250dp"
+        android:hint="Remarque"
+        android:inputType="text"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NoteMoyenne1" />
+
+    <TextView
+        android:id="@+id/viewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="text"
+        android:text="Date Visite:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/textDateVis1"
+        app:layout_constraintTop_toBottomOf="@+id/bViewBilan1" />
+
+    <TextView
+        android:id="@+id/viewNoteDoss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="text"
+        android:text="Note Dossier:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/NoteDos1"
+        app:layout_constraintTop_toBottomOf="@+id/viewDate" />
+
+    <TextView
+        android:id="@+id/viewNoteOral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="text"
+        android:text="Note d'oral:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/NoteOral1"
+        app:layout_constraintTop_toBottomOf="@+id/viewNoteDoss" />
+
+    <TextView
+        android:id="@+id/viewRemarque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="text"
+        android:text="Remarque:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/Remarque1"
+        app:layout_constraintTop_toBottomOf="@+id/viewMoyenne" />
+
+    <TextView
+        android:id="@+id/viewMoyenne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="text"
+        android:text="Moyenne:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/NoteMoyenne1"
+        app:layout_constraintTop_toBottomOf="@+id/viewNoteEnt" />
+
+    <TextView
+        android:id="@+id/viewNoteEnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="text"
+        android:text="Note Entreprise:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/NoteEnt1"
+        app:layout_constraintTop_toBottomOf="@+id/viewNoteOral" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

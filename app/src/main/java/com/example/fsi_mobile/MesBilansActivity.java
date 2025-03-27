@@ -15,6 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class MesBilansActivity extends AppCompatActivity {
 
     private int idEtuConnecte;
+    private EtudiantDataSource eds;
+    private Bilan1DataSource b1d;
+    private Bilan2DataSource b2d;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,13 @@ public class MesBilansActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mes_bilans);
 
         idEtuConnecte = getIntent().getIntExtra("idEtu", 0);
+        eds = new EtudiantDataSource(this);
+        b1d =  new Bilan1DataSource(this);
+        b2d = new Bilan2DataSource(this);
+
+        eds.open();
+        b1d.open();
+        b2d.open();
 
         initialisation();
 
@@ -61,6 +71,9 @@ public class MesBilansActivity extends AppCompatActivity {
 
         imageViewEscape.setOnClickListener(view -> {
             Intent intent = new Intent(MesBilansActivity.this, MainActivity.class);
+            eds.deleteAllEtudiants();
+            b1d.deleteAllBilan1();
+            b2d.deleteAllBilan2();
             startActivity(intent);
             finish();
         });

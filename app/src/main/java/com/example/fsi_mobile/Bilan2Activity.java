@@ -20,6 +20,8 @@ import java.util.Locale;
 
 public class Bilan2Activity extends AppCompatActivity {
 
+    private Bilan1DataSource bilan1DS;
+    private EtudiantDataSource eds;
     private Bilan2DataSource bilan2DS;
     private int idEtuConnecte;
 
@@ -38,9 +40,14 @@ public class Bilan2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_bilan2);
-        bilan2DS = new Bilan2DataSource(this);
-        bilan2DS.open();
         idEtuConnecte = getIntent().getIntExtra("idEtu", 0);
+        bilan1DS = new Bilan1DataSource(this);
+        eds = new EtudiantDataSource(this);
+        bilan2DS = new Bilan2DataSource(this);
+
+        bilan1DS.open();
+        bilan2DS.open();
+        eds.open();
 
         initialisation();
         afficherBilan2();
@@ -83,6 +90,9 @@ public class Bilan2Activity extends AppCompatActivity {
         imageViewEscape.setOnClickListener(view -> {
             Intent intent = new Intent(Bilan2Activity.this, MainActivity.class);
             startActivity(intent);
+            eds.deleteAllEtudiants();
+            bilan1DS.deleteAllBilan1();
+            bilan2DS.deleteAllBilan2();
             finish();
         });
     }
@@ -104,6 +114,8 @@ public class Bilan2Activity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         bilan2DS.close();
+        bilan1DS.close();
+        eds.close();
         super.onDestroy();
     }
 }

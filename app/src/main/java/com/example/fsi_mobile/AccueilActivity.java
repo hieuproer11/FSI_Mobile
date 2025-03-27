@@ -17,6 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class AccueilActivity extends AppCompatActivity {
 
     private EtudiantDataSource eds;
+    private Bilan1DataSource b1d;
+    private Bilan2DataSource b2d;
     private int idEtuConnecte;
 
     private FrameLayout frameLayout;
@@ -38,7 +40,11 @@ public class AccueilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_accueil);
 
         eds = new EtudiantDataSource(this);
+        b1d =  new Bilan1DataSource(this);
+        b2d = new Bilan2DataSource(this);
         eds.open();
+        b1d.open();
+        b2d.open();
 
         // Récupère l'id de l'étudiant passé depuis l'intent
         idEtuConnecte = getIntent().getIntExtra("idEtu", 0);
@@ -93,6 +99,9 @@ public class AccueilActivity extends AppCompatActivity {
 
         imageViewEscape.setOnClickListener(view -> {
             startActivity(new Intent(AccueilActivity.this, MainActivity.class));
+            eds.deleteAllEtudiants();
+            b1d.deleteAllBilan1();
+            b2d.deleteAllBilan2();
             finish();
         });
     }
@@ -100,6 +109,8 @@ public class AccueilActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         eds.close();
+        b1d.close();
+        b2d.close();
         super.onDestroy();
     }
 }

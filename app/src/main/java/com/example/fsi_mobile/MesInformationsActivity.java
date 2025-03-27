@@ -15,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MesInformationsActivity extends AppCompatActivity {
     private EtudiantDataSource eds;
+    private Bilan1DataSource b1d;
+    private Bilan2DataSource b2d;
     private int idEtuConnecte;
 
     private TextView tNomEtu, tPreEtu, tMailEtu, tClasse, tSpecialite, tAdresse;
@@ -29,7 +31,12 @@ public class MesInformationsActivity extends AppCompatActivity {
 
         idEtuConnecte = getIntent().getIntExtra("idEtu", 0);
         eds = new EtudiantDataSource(this);
+        b1d =  new Bilan1DataSource(this);
+        b2d = new Bilan2DataSource(this);
+
         eds.open();
+        b1d.open();
+        b2d.open();
 
         initialisation();
         afficherInformations();
@@ -72,6 +79,9 @@ public class MesInformationsActivity extends AppCompatActivity {
         imageViewEscape.setOnClickListener(view -> {
             Intent intent = new Intent(MesInformationsActivity.this, MainActivity.class);
             startActivity(intent);
+            eds.deleteAllEtudiants();
+            b1d.deleteAllBilan1();
+            b2d.deleteAllBilan2();
             finish();
         });
     }
@@ -100,6 +110,8 @@ public class MesInformationsActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        b1d.close();
+        b2d.close();
         eds.close();
         super.onDestroy();
     }

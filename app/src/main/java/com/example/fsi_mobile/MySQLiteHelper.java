@@ -17,7 +17,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "FSI_Mobile.db";
     public static final int DATABASE_VERSION = 1;
 
-    private static final String DATABASE_CREATE = "CREATE TABLE IF NOT EXISTS " + TABLE_COMMENTS + "(idEtu integer primary key autoincrement, " + "nomEtu text, preEtu text, login text UNIQUE, mdp text, mailEtu text, classe text, specialite text, adrEtu text, nomEnt text, adrEnt text, nomMai text, preMai text, telMai integer, mailMai text, nomTut text, preTut text);";
+    private static final String DATABASE_CREATE = "CREATE TABLE IF NOT EXISTS " + TABLE_COMMENTS + "(idEtu integer primary key autoincrement, " + "nomEtu text, preEtu text, login text UNIQUE, mdp text, mailEtu text, telEtu integer, classe text, specialite text, adrEtu text, nomEnt text, adrEnt text, nomMai text, preMai text, telMai integer, mailMai text, nomTut text, preTut text);";
     private static final String DATABASE_CREATE1 = "CREATE TABLE IF NOT EXISTS " + TABLE_COMMENTS1  + "(idBil1 integer primary key autoincrement, "
                                                                                                     + "idEtu INTEGER UNIQUE, "
                                                                                                     + "dateVis1 Date, noteDoss1 float, noteOral1 float, noteEnt1 float, moyenne1 float, remarque text,"

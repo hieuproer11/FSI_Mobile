@@ -11,6 +11,7 @@ public class Etudiant {
     private String login;
     private String mdp;
     private String mailEtu;
+    private int telEtu;
     private String classe;
 
     private String specialite;
@@ -24,13 +25,14 @@ public class Etudiant {
     private String nomTut;
     private String preTut;
 
-    public Etudiant(int idEtu, String nomEtu, String preEtu, String login, String mdp, String mailEtu, String classe, String specialite, String adrEtu, String nomEnt, String adrEnt, String nomMai, String preMai, int telMai, String mailMai, String nomTut, String preTut) {
+    public Etudiant(int idEtu, String nomEtu, String preEtu, String login, String mdp, String mailEtu, int telEtu, String classe, String specialite, String adrEtu, String nomEnt, String adrEnt, String nomMai, String preMai, int telMai, String mailMai, String nomTut, String preTut) {
         this.idEtu = idEtu;
         this.nomEtu = nomEtu;
         this.preEtu = preEtu;
         this.login = login;
         this.mdp = mdp;
         this.mailEtu = mailEtu;
+        this.telEtu =  telEtu;
         this.classe = classe;
         this.specialite = specialite;
         this.adrEtu = adrEtu;
@@ -182,4 +184,11 @@ public class Etudiant {
     }
 
 
+    public int getTelEtu() {
+        return telEtu;
+    }
+
+    public void setTelEtu(int telEtu) {
+        this.telEtu = telEtu;
+    }
 }

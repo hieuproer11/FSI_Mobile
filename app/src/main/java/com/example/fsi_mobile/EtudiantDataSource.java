@@ -25,7 +25,7 @@ public class EtudiantDataSource {
 
     public Etudiant getByIdEtu(int id){
         Etudiant unEtu = null;
-        Cursor curseur = database.query(true, "ETUDIANTS", new String[]{"idEtu","nomEtu","preEtu","login","mdp","mailEtu","classe","specialite","adrEtu","nomEnt","adrEnt","nomMai","preMai","telMai","mailMai","nomTut","preTut"},
+        Cursor curseur = database.query(true, "ETUDIANTS", new String[]{"idEtu","nomEtu","preEtu","login","mdp","mailEtu","telEtu","classe","specialite","adrEtu","nomEnt","adrEnt","nomMai","preMai","telMai","mailMai","nomTut","preTut"},
                "idEtu = " + id, null,null,null,null,null);
         while(curseur.moveToNext()){
             unEtu = cursorToEtudiant(curseur);
@@ -48,6 +48,18 @@ public class EtudiantDataSource {
 
         return exists;
     }
+    public boolean updateMailEtu(int idEtu, String nouveauMail) {
+        ContentValues values = new ContentValues();
+        values.put("mailEtu", nouveauMail);
+        int rowsAffected = database.update(
+                "ETUDIANTS",         // Table
+                values,              // Nouvelles valeurs
+                "idEtu = ?",         // Clause WHERE
+                new String[]{String.valueOf(idEtu)} // Arguments WHERE
+        );
+
+        return rowsAffected > 0; // Retourne vrai si la modification a réussi
+    }
 
     public Etudiant insertEtu(Etudiant etudiant) {
         if (etudiantExists(etudiant.getIdEtu())) {
@@ -62,6 +74,7 @@ public class EtudiantDataSource {
         values.put("login", etudiant.getLogin());
         values.put("mdp", etudiant.getMdp());
         values.put("mailEtu", etudiant.getMailEtu());
+        values.put("telEtu", etudiant.getTelEtu());
         values.put("classe", etudiant.getClasse());
         values.put("specialite", etudiant.getSpecialite());
         values.put("adrEtu", etudiant.getAdrEtu());
@@ -87,6 +100,7 @@ public class EtudiantDataSource {
         int login = cursor.getColumnIndexOrThrow("login");
         int mdp = cursor.getColumnIndexOrThrow("mdp");
         int mailEtu = cursor.getColumnIndexOrThrow("mailEtu");
+        int telEtu = cursor.getColumnIndexOrThrow("telEtu");
         int classe = cursor.getColumnIndexOrThrow("classe");
         int specialite = cursor.getColumnIndexOrThrow("specialite");
         int adrEtu = cursor.getColumnIndexOrThrow("adrEtu");
@@ -105,6 +119,7 @@ public class EtudiantDataSource {
         String loginn = cursor.getString(login);
         String mdpp = cursor.getString(mdp);
         String mailEt = cursor.getString(mailEtu);
+        int telEt =  cursor.getInt(telEtu);
         String classeEt = cursor.getString(classe);
         String specialiteEt = cursor.getString(specialite);
         String adrEt = cursor.getString(adrEtu);
@@ -117,7 +132,7 @@ public class EtudiantDataSource {
         String nomT = cursor.getString(nomTut);
         String preT = cursor.getString(preTut);
 
-        return new Etudiant(id, nomEt, preEt, loginn, mdpp, mailEt, classeEt, specialiteEt, adrEt, nomE, adrE, nomM, preM, telM, mailM, nomT, preT);
+        return new Etudiant(id, nomEt, preEt, loginn, mdpp, mailEt, telEt, classeEt, specialiteEt, adrEt, nomE, adrE, nomM, preM, telM, mailM, nomT, preT);
     }
     public void deleteAllEtudiants() {
         database.delete("ETUDIANTS", null, null);

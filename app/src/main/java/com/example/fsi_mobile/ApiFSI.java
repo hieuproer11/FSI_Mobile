@@ -14,7 +14,6 @@ import retrofit2.http.Path;
 
 public interface ApiFSI {
     String BASE_URL = "https://capyfsi.site/API/";
-
         @FormUrlEncoded
         @POST("Hieu.php")
         Call<LoginReponse> login(@Field("login") String login, @Field("mdp") String mdp);

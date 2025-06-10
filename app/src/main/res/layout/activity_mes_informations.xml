@@ -98,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="175dp"
         android:text="INFORMATIONS D'ENTREPRISE:"
         android:textColor="@color/vert"
         android:textSize="20dp"
@@ -138,6 +138,27 @@
         android:text="Mail:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPreEtu" />
+
+    <TextView
+        android:id="@+id/textTelEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:text="Téléphone:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMailEtu" />
+
+    <TextView
+        android:id="@+id/tTelEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Téléphone"
+        app:layout_constraintStart_toEndOf="@+id/textTelEtu"
+        app:layout_constraintTop_toBottomOf="@+id/tMailEtu" />
 
     <TextView
         android:id="@+id/textClasse"

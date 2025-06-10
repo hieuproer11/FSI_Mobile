@@ -19,7 +19,7 @@ public class MesInformationsActivity extends AppCompatActivity {
     private Bilan2DataSource b2d;
     private int idEtuConnecte;
 
-    private TextView tNomEtu, tPreEtu, tMailEtu, tClasse, tSpecialite, tAdresse;
+    private TextView tNomEtu, tPreEtu, tMailEtu, tTelEtu, tClasse, tSpecialite, tAdresse;
     private TextView tNomEnt, tAdresseEnt, tNomMaitre, tPreMaitre, tTelMaitre, tMailMaitre;
     private TextView tNomTut, tPreTut;
 
@@ -52,6 +52,7 @@ public class MesInformationsActivity extends AppCompatActivity {
         tNomEtu = findViewById(R.id.tNomEtu);
         tPreEtu = findViewById(R.id.tPreEtu);
         tMailEtu = findViewById(R.id.tMailEtu);
+        tTelEtu = findViewById(R.id.tTelEtu);
         tAdresse = findViewById(R.id.tAdresse);
         tClasse = findViewById(R.id.tClasse);
         tSpecialite = findViewById(R.id.tSpecialite);
@@ -75,7 +76,6 @@ public class MesInformationsActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-
         imageViewEscape.setOnClickListener(view -> {
             Intent intent = new Intent(MesInformationsActivity.this, MainActivity.class);
             startActivity(intent);
@@ -92,6 +92,7 @@ public class MesInformationsActivity extends AppCompatActivity {
             tNomEtu.setText(etu.getNomEtu());
             tPreEtu.setText(etu.getPreEtu());
             tMailEtu.setText(etu.getMailEtu());
+            tTelEtu.setText(etu.getTelEtu());
             tAdresse.setText(etu.getAdrEtu());
             tClasse.setText(etu.getClasse());
             tSpecialite.setText(etu.getSpecialite());

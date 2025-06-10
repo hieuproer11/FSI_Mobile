@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Modif_mail">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/vert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="280dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textModifMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="130dp"
+            android:text="Modifier Mail"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="108dp"
+        android:background="@color/vert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageViewEscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="280dp"
+            app:srcCompat="@drawable/escape__1_">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/imageViewReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="280dp"
+            app:srcCompat="@drawable/resource_return">
+        </ImageView>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textMailEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize = "25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:text="Mail:"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf = "@+id/frameLayout"
+    />
+    <EditText
+        android:id="@+id/editMailEtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:hint="Mail etudiant"
+        app:layout_constraintStart_toEndOf="@+id/textMailEtu"
+        app:layout_constraintTop_toBottomOf = "@+id/frameLayout"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

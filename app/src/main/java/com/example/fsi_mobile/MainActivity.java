@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         editTextLogin = findViewById(R.id.editTextLogin);
         editTextMdp = findViewById(R.id.editTextPassword);
         bConnecter = findViewById(R.id.bConnecter);
-
         bConnecter.setOnClickListener(view -> {
             String login = editTextLogin.getText().toString();
             String mdp = editTextMdp.getText().toString();
